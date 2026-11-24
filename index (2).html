@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Non-Metal Elements Checker</title>
+	<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+	<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			background: #c85de0;
+			font-family: Arial, sans-serif;
+		}
+
+		.site-nav {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 8px;
+			padding: 10px 12px;
+			background: #780095;
+		}
+
+		.site-nav a {
+			padding: 8px 12px;
+			border-radius: 6px;
+			color: white;
+			font: 600 15px Arial, sans-serif;
+			text-decoration: none;
+		}
+
+		.site-nav a:hover, .site-nav a:focus-visible {
+			background: #a000c8;
+			outline: 2px solid white;
+		}
+
+		main {
+			width: min(480px, calc(100% - 32px));
+			margin: auto;
+			overflow: hidden;
+			border-radius: 16px;
+			background: #f8e2ff;
+		}
+
+		h1 {
+			margin: 0;
+			padding: 14px;
+			background: #a000c8;
+			color: white;
+			text-align: center;
+			font-size: 28px;
+		}
+
+		section {
+			padding: 20px 28px 32px;
+		}
+
+		label, h2 {
+			color: #a34a24;
+			font-size: 20px;
+		}
+
+		input {
+			box-sizing: border-box;
+			width: 100%;
+			margin: 8px 0 16px;
+			padding: 12px 16px;
+			border: 0;
+			border-radius: 24px;
+			font: inherit;
+		}
+
+		button {
+			display: block;
+			width: 70%;
+			margin: 0 auto;
+			padding: 12px;
+			border: 0;
+			border-radius: 24px;
+			background: #ff914d;
+			color: white;
+			font: bold 16px Arial, sans-serif;
+			cursor: pointer;
+		}
+
+		h2 {
+			margin: 36px 0 14px;
+		}
+
+		#result {
+			min-height: 112px;
+			padding: 18px 22px;
+			border-radius: 28px;
+			background: #efc8fa;
+			color: #78348b;
+			line-height: 1.8;
+		}
+	</style>
+</head>
+<body>
+	<nav class="site-nav" aria-label="Main navigation">
+		<a href="index.html">School Club Member Checker</a>
+		<a href="index%20(2).html" aria-current="page">Element Checker</a>
+		<a href="meet-the-creator.html">Meet the Creator</a>
+	</nav>
+	<main>
+		<h1>Non-Metal Elements Checker</h1>
+		<section>
+			<label for="element">Element name:</label>
+			<input id="element" type="text" placeholder="For example: Oxygen">
+			<button type="button" py-click="find_element">Check Details</button>
+			<h2>Details</h2>
+			<div id="result" aria-live="polite">Enter a non-metal to see its details.</div>
+		</section>
+	</main>
+	<script type="py" src="./main.py"></script>
+</body>
+</html>
